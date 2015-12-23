@@ -40,5 +40,4 @@ class ListRelation(Attribute):
     return [self.mapper.to_hash(value) for value in values]
 
   def set(self, target_object, values):
-    print(values)
     target_object.__dict__[self.target_attribute_name] = [self.mapper.from_hash(value) for value in values]
